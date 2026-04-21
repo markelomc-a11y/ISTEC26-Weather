@@ -1,0 +1,159 @@
+/* Gothic Style Theme for Weather App */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: #0b0b0b;
+  background-image: radial-gradient(rgba(30, 30, 40, 0.6) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  color: #d4cfc7;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  background: rgba(15, 15, 20, 0.7);
+  padding: 0.8rem 1.8rem;
+  border: 1px solid #3a2c2c;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(3px);
+}
+
+#controls label {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b68b40;
+  text-shadow: 0 0 3px #1a0f0a;
+}
+
+#citySelect {
+  background: #1e1a17;
+  color: #ecd9b4;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: 1px solid #6b4c3a;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+}
+
+#citySelect:hover {
+  background: #2c241f;
+  border-color: #b87c4f;
+  box-shadow: 0 0 6px rgba(184, 124, 79, 0.4);
+}
+
+#display {
+  background: #11100e;
+  max-width: 550px;
+  width: 100%;
+  padding: 1.8rem;
+  border: 1px solid #3e2b24;
+  border-top: 2px solid #6b4c3a;
+  border-bottom: 2px solid #2a1f1a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+
+#display::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  pointer-events: none;
+  border: 1px solid rgba(90, 60, 45, 0.3);
+}
+
+#display h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #b87c4f;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-left: 3px solid #8b5a3c;
+  padding-left: 14px;
+  text-shadow: 2px 2px 0 #0a0503;
+}
+
+.temp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed #2a241f;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background 0.2s;
+}
+
+.temp-row:hover {
+  background: #1c1815;
+  border-bottom-color: #5e3e2e;
+}
+
+.temp-value {
+  font-family: 'Cinzel', monospace;
+  font-weight: 600;
+  color: #e0a878;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+}
+
+#loading {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 2rem;
+  color: #9e7a5c;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* scrollbar gótica */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #1a1512;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a3528;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6f4e38;
+}
+
+/* pequenos detalhes */
+.temp-row span:first-child {
+  font-family: 'Cormorant Garamond', monospace;
+  font-weight: 600;
+  color: #bfae9a;
+}
