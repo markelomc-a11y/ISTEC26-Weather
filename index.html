@@ -2,16 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>City Temperature</title>
+    <title>Gothic Data Art · Weather & Air Canvas</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
   </head>
   <body>
     <div id="controls">
-      <label for="citySelect">Choose a city:</label>
+      <label for="citySelect">✦ CHOOSE A CITY ✦</label>
       <select id="citySelect"></select>
     </div>
+
+    <!-- Dynamic canvas infographic (non‑interactive) -->
+    <div id="canvas-container" class="canvas-frame"></div>
+
+    <!-- Classic temperature panel (existing functionality) -->
     <div id="display"></div>
+
     <script src="sketch.js"></script>
   </body>
 </html>
